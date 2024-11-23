@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro do Pet</title>
+  <link rel="stylesheet" href="animais.css">
+  <link rel="icon" href="pata.png" type="image/x-icon">
+</head>
+<body>
+
+<div class="pet-card">
+  <label for="photoUpload">
+    <img src="https://via.placeholder.com/100" alt="Foto do pet" class="pet-foto" id="petfoto">
+  </label>
+  <input type="file" id="photoUpload" accept="image/*" style="display: none;" onchange="preview(event)">
+
+  <div class="info">
+    <label for="nome">Nome:</label>
+    <input type="text" id="petnome" placeholder="Digite o nome do pet">
+    
+    <label for="idade">Idade:</label>
+    <input type="number" id="petidade" placeholder="Digite a idade do pet" min="0" required>
+    
+    <label for="tipo">Qual seu animal?</label>
+    <select id="pet" required>
+      <option value="">Selecione...</option>
+      <option value="cachorro">Cachorro</option>
+      <option value="gato">Gato</option>
+    </select>
+    
+    <label for="notas">Observações:</label>
+    <textarea id="notas" rows="3" placeholder="Escreva observações..."></textarea>
+    
+    <button class="enviar_botao" onclick="salvarPet()">Salvar</button>
+  </div>
+
+  <a href="aba2.html" target="_blank">
+    <button class="aba2link_botao">Ver Pets</button>
+  </a>
+
+</div>
+
+<script src="animais.js"></script>
+</body>
+</html>
